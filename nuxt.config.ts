@@ -1,8 +1,12 @@
 import { defineNuxtConfig } from 'nuxt';
+import { resolve } from 'path';
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss'], // Enable Tailwind CSS
+  modules: ['@nuxtjs/tailwindcss'],
+  alias: {
+    '~': resolve(__dirname, './'),
+  },
   tailwindcss: {
-    // Tailwind CSS options (if needed)
+    cssPath: '~/assets/css/main.css',
   }
 });
